@@ -1,4 +1,7 @@
-package cards;
+import abtractsClasses.CardFactory;
+import abtractsClasses.FactoryVisa;
+import cards.Card;
+import cards.Factory;
 
 public class mainClass {
 	private String name;
@@ -13,6 +16,10 @@ public class mainClass {
 		Card myCard = myFactory.specificCard(123, "Alejandro", 1234, "Mastercard");
 		
 		System.out.println(myCard);
+		
+		Card mySecondCard = CardFactory.getCard(new FactoryVisa(1234, "Facundo", 56));
+		
+		System.out.println(mySecondCard);
 	}
 
 }
